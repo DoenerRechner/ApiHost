@@ -1,0 +1,19 @@
+{
+	"name": "Existing Docker Compose (Extend)",
+	"dockerComposeFile": [
+		"docker-compose.yml",
+		"docker-compose.user.yml",
+	],
+	"service": "app",
+	"workspaceFolder": "/workspace",
+	"extensions": [
+		"mblode.twig-language-2",
+		"sibiraj-s.vscode-scss-formatter",
+		"esbenp.prettier-vscode",
+		"bmewburn.vscode-intelephense-client",
+		"phproberto.vscode-php-getters-setters",
+		"felixfbecker.php-debug",
+		"junstyle.php-cs-fixer",
+		"yzhang.markdown-all-in-one"
+	],
+}

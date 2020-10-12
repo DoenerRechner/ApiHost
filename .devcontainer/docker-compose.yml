@@ -1,0 +1,31 @@
+# Use root/example as user/password credentials
+version: "2"
+
+services:
+  db:
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    env_file: .env
+    user: 1000:1000
+    volumes:
+      - ./data/mysql:/var/lib/mysql
+
+  app:
+    image: fluxter/web-php-dev:7.4
+    env_file: .env
+    ports:
+      - 8080:80
+    volumes:
+      - ..:/workspace
+    environment:
+      - PMA_HOST=db
+      - DIR_APP=/workspace
+    depends_on:
+      - db
+
+  pma:
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - 8081:80
+    environment:
+      - UPLOAD_LIMIT=2G

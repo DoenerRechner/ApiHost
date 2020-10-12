@@ -1,0 +1,15 @@
+#-------------------------------------------------------------------------------------------------------------
+# Copyright (c) Microsoft Corporation. All rights reserved.
+# Licensed under the MIT License. See https://go.microsoft.com/fwlink/?linkid=2090316 for license information.
+#-------------------------------------------------------------------------------------------------------------
+
+    version: '2'
+    services:
+        app:
+            environment:
+                USER_ID: 1000
+                GROUP_ID: 1000
+                FXGITLABAPIKEY: 
+        db:
+            user: 1000:1000
+    
