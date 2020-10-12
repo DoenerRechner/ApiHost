@@ -9,7 +9,6 @@
             environment:
                 USER_ID: 1000
                 GROUP_ID: 1000
-                FXGITLABAPIKEY: 
         db:
             user: 1000:1000
     
